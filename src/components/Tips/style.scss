@@ -1,0 +1,44 @@
+@import '../MediaQuery//media.scss';
+
+.tips-section {
+	& span {
+		color: #ffd700;
+		font-family: 'Coolvetica';
+
+		font-size: 5rem;
+		font-weight: bold;
+		letter-spacing: 2px;
+		&:hover {
+			color: #fff;
+		}
+	}
+
+	& .tips-tabs {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 2rem;
+		// this really fucking imortant to fade animation in decent way
+		opacity: 0;
+		will-change: contents;
+		// end
+		margin-top: 5rem;
+		transform-style: preserve-3d;
+		animation: fadeIn 1s forwards;
+		animation-delay: 1s;
+
+		& a {
+			width: 16rem;
+			&:hover {
+				animation: heartBeat 1s;
+			}
+
+			& img {
+				width: 100%;
+			}
+
+			@include screen-ss {
+				width: 8rem;
+			}
+		}
+	}
+}

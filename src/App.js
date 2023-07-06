@@ -1,25 +1,26 @@
 import logo from './logo.svg';
-import './App.css';
-
+import './App.scss';
+import { Routes, Route } from 'react-router-dom';
+import Layout from './components/Layout';
+import Home from './components/Home';
+import About from './components/About';
+import Contact from './components/Contact';
+import Tips from './components/Tips';
+import Cube from './components/cube';
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<>
+			<Routes>
+				<Route path='/' element={<Layout />}>
+					<Route index element={<Home />} />
+					<Route path='/about' element={<About />} />
+					<Route path='/contact' element={<Contact />} />
+					<Route path='/tips' element={<Tips />} />
+					<Route path='/cube' element={<Cube />} />
+				</Route>
+			</Routes>
+		</>
+	);
 }
 
 export default App;

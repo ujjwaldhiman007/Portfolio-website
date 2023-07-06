@@ -1,0 +1,19 @@
+@import '../../MediaQuery/media.scss';
+
+.logo-container {
+	// border: 2px solid aqua;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 46vw;
+	margin-left: 91rem;
+
+	& .solid-logo {
+		width: 100%;
+	}
+
+	@include screen-ss {
+		margin-left: 29rem;
+		margin-top: 15rem;
+	}
+}
